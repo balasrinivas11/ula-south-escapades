@@ -1,12 +1,36 @@
 
-import React, { useState } from 'react';
-import { ArrowRight, Mountain, Waves, Trees, Camera, Users, Award } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, Mountain, Waves, Trees, Camera, Users, Award, ChevronLeft, ChevronRight } from 'lucide-react';
 import PackageCard from '../components/PackageCard';
 import RegistrationModal from '../components/RegistrationModal';
 
 const Index = () => {
   const [selectedPackage, setSelectedPackage] = useState('');
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  const heroImages = [
+    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&h=1080&fit=crop",
+    "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=1920&h=1080&fit=crop",
+    "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=1920&h=1080&fit=crop",
+    "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1920&h=1080&fit=crop",
+    "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1920&h=1080&fit=crop"
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+    }, 5000);
+    return () => clearInterval(timer);
+  }, [heroImages.length]);
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % heroImages.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + heroImages.length) % heroImages.length);
+  };
 
   const packages = [
     {
@@ -15,7 +39,6 @@ const Index = () => {
       location: "Munnar, Kerala",
       image: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&h=600&fit=crop",
       duration: "3 Days / 2 Nights",
-      price: "₹12,999 per person",
       rating: 4.8,
       highlights: [
         "Tea plantation tours",
@@ -26,17 +49,16 @@ const Index = () => {
     },
     {
       id: 2,
-      title: "Coimbatore Heritage",
-      location: "Coimbatore, Tamil Nadu",
+      title: "Coorg Coffee Hills",
+      location: "Coorg, Karnataka",
       image: "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=800&h=600&fit=crop",
       duration: "2 Days / 1 Night",
-      price: "₹8,999 per person",
       rating: 4.6,
       highlights: [
-        "Isha Yoga Center",
-        "Marudhamalai Temple",
-        "Black Thunder theme park",
-        "Local textile shopping"
+        "Coffee plantation tours",
+        "Abbey Falls",
+        "Raja's Seat viewpoint",
+        "Traditional Kodava cuisine"
       ]
     },
     {
@@ -45,7 +67,6 @@ const Index = () => {
       location: "Alappuzha, Kerala",
       image: "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=600&fit=crop",
       duration: "2 Days / 1 Night",
-      price: "₹15,999 per person",
       rating: 4.9,
       highlights: [
         "Houseboat cruise",
@@ -60,7 +81,6 @@ const Index = () => {
       location: "Ooty, Tamil Nadu",
       image: "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=600&fit=crop",
       duration: "4 Days / 3 Nights",
-      price: "₹16,999 per person",
       rating: 4.7,
       highlights: [
         "Nilgiri Mountain Railway",
@@ -75,7 +95,6 @@ const Index = () => {
       location: "Kodaikanal, Tamil Nadu",
       image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=800&h=600&fit=crop",
       duration: "3 Days / 2 Nights",
-      price: "₹13,999 per person",
       rating: 4.8,
       highlights: [
         "Kodai Lake boating",
@@ -90,7 +109,6 @@ const Index = () => {
       location: "Wayanad, Kerala",
       image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?w=800&h=600&fit=crop",
       duration: "3 Days / 2 Nights",
-      price: "₹14,999 per person",
       rating: 4.7,
       highlights: [
         "Wildlife sanctuary safari",
@@ -108,14 +126,48 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section with Slider */}
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-navy-950/80 to-navy-800/60 z-10"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&h=1080&fit=crop"
-          alt="South India Landscape"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
+        
+        {/* Image Slider */}
+        {heroImages.map((image, index) => (
+          <img 
+            key={index}
+            src={image}
+            alt={`South India Landscape ${index + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${
+              index === currentSlide ? 'opacity-100' : 'opacity-0'
+            }`}
+          />
+        ))}
+        
+        {/* Navigation Arrows */}
+        <button 
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-300"
+        >
+          <ChevronLeft className="w-6 h-6" />
+        </button>
+        <button 
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-black/30 hover:bg-black/50 text-white p-2 rounded-full transition-all duration-300"
+        >
+          <ChevronRight className="w-6 h-6" />
+        </button>
+        
+        {/* Slide Indicators */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2">
+          {heroImages.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentSlide(index)}
+              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                index === currentSlide ? 'bg-gold-500' : 'bg-white/50'
+              }`}
+            />
+          ))}
+        </div>
         
         <div className="relative z-20 text-center text-white px-4 max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
@@ -185,7 +237,6 @@ const Index = () => {
                 location={pkg.location}
                 image={pkg.image}
                 duration={pkg.duration}
-                price={pkg.price}
                 rating={pkg.rating}
                 highlights={pkg.highlights}
                 onRegister={() => handleRegister(pkg.title)}

@@ -7,7 +7,6 @@ interface PackageCardProps {
   location: string;
   image: string;
   duration: string;
-  price: string;
   rating: number;
   highlights: string[];
   onRegister: () => void;
@@ -18,7 +17,6 @@ const PackageCard: React.FC<PackageCardProps> = ({
   location,
   image,
   duration,
-  price,
   rating,
   highlights,
   onRegister
@@ -35,9 +33,6 @@ const PackageCard: React.FC<PackageCardProps> = ({
         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center space-x-1">
           <Star className="w-4 h-4 text-yellow-500 fill-current" />
           <span className="text-sm font-semibold">{rating}</span>
-        </div>
-        <div className="absolute bottom-4 left-4 bg-navy-900/80 backdrop-blur-sm text-white px-3 py-1 rounded-lg">
-          <span className="font-semibold">{price}</span>
         </div>
       </div>
 
