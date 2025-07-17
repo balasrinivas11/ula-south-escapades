@@ -177,11 +177,17 @@ const Index = () => {
             Discover the enchanting beauty of Kerala and Tamil Nadu with our curated premium packages
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
-            <button className="btn-gold flex items-center justify-center space-x-2">
+            <button 
+              onClick={() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' })}
+              className="btn-gold flex items-center justify-center space-x-2 hover:scale-105 transition-transform duration-300"
+            >
               <span>Explore Packages</span>
               <ArrowRight className="w-5 h-5" />
             </button>
-            <button className="border-2 border-gold-500 text-gold-300 hover:bg-gold-500 hover:text-navy-900 px-6 py-3 rounded-lg font-semibold transition-all duration-300">
+            <button 
+              onClick={() => window.location.href = '/contact'}
+              className="border-2 border-gold-500 text-gold-300 hover:bg-gold-500 hover:text-navy-900 px-6 py-3 rounded-lg font-semibold transition-all duration-300 hover:scale-105"
+            >
               Contact Us
             </button>
           </div>
@@ -218,7 +224,7 @@ const Index = () => {
       </section>
 
       {/* Packages Section */}
-      <section className="py-20">
+      <section id="packages" className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">

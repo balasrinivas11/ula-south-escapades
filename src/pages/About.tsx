@@ -1,8 +1,10 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Users, Award, MapPin, Heart, Clock, Shield } from 'lucide-react';
+import RegistrationModal from '../components/RegistrationModal';
 
 const About = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   return (
     <div className="min-h-screen py-20">
       <div className="container mx-auto px-4">
@@ -183,13 +185,23 @@ const About = () => {
                 destinations. From serene backwaters to majestic mountains, every moment 
                 promises to be extraordinary.
               </p>
-              <button className="btn-gold w-full">
+              <button 
+                onClick={() => setIsModalOpen(true)}
+                className="btn-gold w-full hover:scale-105 transition-transform duration-300"
+              >
                 Start Planning Your Trip
               </button>
             </div>
           </div>
         </div>
       </div>
+      
+      {/* Registration Modal */}
+      <RegistrationModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        packageName="Custom South India Package"
+      />
     </div>
   );
 };
