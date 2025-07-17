@@ -66,7 +66,7 @@
     "@eslint/js": "^9.9.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "^22.5.5",
-    "@types/react": "^18.3.3",
+    "@types/react": "^18.3.23",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "autoprefixer": "^10.4.20",
@@ -80,5 +80,9 @@
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
-  }
+  },
+  "description": "**URL**: https://lovable.dev/projects/1021fd9d-7fca-49b3-a3d6-6879956537a6",
+  "main": "eslint.config.js",
+  "author": "",
+  "license": "ISC"
 }

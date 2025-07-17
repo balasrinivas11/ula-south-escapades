@@ -15,7 +15,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <MapPin className="w-8 h-8 text-gold-500" />
-            <span className="text-2xl font-bold gradient-text">ULA TRAVELS</span>
+            <span className="text-2xl font-bold gradient-text">ULA TRAVEL</span>
           </Link>
           
           {/* Navigation Links */}
@@ -50,11 +50,11 @@ const Navigation = () => {
           <div className="hidden lg:flex items-center space-x-4 text-sm text-gold-300">
             <div className="flex items-center space-x-1">
               <Phone className="w-4 h-4" />
-              <span>+91-XXXXXXXXXX</span>
+              <span>+91-7550082852</span>
             </div>
             <div className="flex items-center space-x-1">
               <Mail className="w-4 h-4" />
-              <span>info@ulatravels.com</span>
+              <span>ulark491999@gmail.com</span>
             </div>
           </div>
         </div>

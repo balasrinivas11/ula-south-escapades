@@ -108,27 +108,8 @@ const About = () => {
           </div>
         </div>
 
-        {/* Statistics Section */}
-        <div className="bg-gradient-to-r from-gold-600 to-gold-500 rounded-xl p-8 mb-20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-navy-900 mb-2">10+</div>
-              <div className="text-navy-800 font-medium">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-navy-900 mb-2">5000+</div>
-              <div className="text-navy-800 font-medium">Happy Travelers</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-navy-900 mb-2">50+</div>
-              <div className="text-navy-800 font-medium">Destinations</div>
-            </div>
-            <div>
-              <div className="text-4xl font-bold text-navy-900 mb-2">24/7</div>
-              <div className="text-navy-800 font-medium">Support</div>
-            </div>
-          </div>
-        </div>
+       
+       
 
         {/* Why Choose Us Section */}
         <div>

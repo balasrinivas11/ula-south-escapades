@@ -12,7 +12,6 @@ interface RegistrationModalProps {
 const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, packageName }) => {
   const [formData, setFormData] = useState({
     name: '',
-    age: '',
     email: '',
     phone: '',
     startDate: '',
@@ -54,10 +53,9 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
     try {
       // EmailJS configuration - replace these with your actual IDs
       const templateParams = {
-        to_email: 'your@email.com', // Replace with actual email
+        to_email: 'ulark491999@gmail.com', // Replace with actual email
         package_name: packageName,
         name: formData.name,
-        age: formData.age,
         email: formData.email,
         phone: formData.phone,
         start_date: formData.startDate,
@@ -69,10 +67,10 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_x2t314b', // Replace with your EmailJS service ID
+        'template_6iiyjcr', // Replace with your EmailJS template ID
         templateParams,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'zPk1D6Jtt-0vf4I-h' // Replace with your EmailJS public key
       );
 
       toast({
@@ -83,7 +81,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
       // Reset form and close modal
       setFormData({
         name: '',
-        age: '',
+        
         email: '',
         phone: '',
         startDate: '',
@@ -161,22 +159,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
                   />
                 </div>
                 
-                <div className="group">
-                  <label className="block text-sm font-medium text-gray-700 mb-2 group-hover:text-navy-800 transition-colors">
-                    Age *
-                  </label>
-                  <input
-                    type="number"
-                    name="age"
-                    value={formData.age}
-                    onChange={handleInputChange}
-                    required
-                    min="1"
-                    max="120"
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gold-500 focus:border-gold-500 transition-all duration-300 hover:border-gold-400 bg-white/80"
-                    placeholder="Age"
-                  />
-                </div>
+                
               </div>
             </div>
 

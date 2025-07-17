@@ -26,7 +26,7 @@ const Contact = () => {
     try {
       // EmailJS configuration - replace these with your actual IDs
       const templateParams = {
-        to_email: 'your@email.com', // Replace with actual email
+        to_email: 'ulark491999@gmail.com', // Replace with actual email
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
@@ -34,10 +34,10 @@ const Contact = () => {
       };
 
       await emailjs.send(
-        'YOUR_SERVICE_ID', // Replace with your EmailJS service ID
-        'YOUR_CONTACT_TEMPLATE_ID', // Replace with your EmailJS template ID
+        'service_x2t314b', // Replace with your EmailJS service ID
+        'template_ps3uzg9', // Replace with your EmailJS template ID
         templateParams,
-        'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+        'zPk1D6Jtt-0vf4I-h' // Replace with your EmailJS public key
       );
 
       toast({
@@ -168,8 +168,8 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">Phone Numbers</h4>
                     <p className="text-gray-300">
-                      +91-XXXXXXXXXX (Primary)<br />
-                      +91-XXXXXXXXXX (WhatsApp)
+                      +91-7550082852 (Primary)<br />
+                      
                     </p>
                   </div>
                 </div>
@@ -181,8 +181,8 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
                     <p className="text-gray-300">
-                      info@ulatravels.com<br />
-                      support@ulatravels.com
+                      ulark491999@gmail.com.com<br />
+                      
                     </p>
                   </div>
                 </div>
@@ -244,13 +244,7 @@ const Contact = () => {
           </div>
         </div>
 
-        {/* Map Section (Placeholder) */}
-        <div className="mt-16 bg-white/10 backdrop-blur-sm rounded-xl p-8">
-          <h3 className="text-2xl font-bold text-white mb-6 text-center">Visit Our Office</h3>
-          <div className="bg-gray-800 rounded-lg h-64 flex items-center justify-center">
-            <p className="text-gray-400">Interactive Map Coming Soon</p>
-          </div>
-        </div>
+        
       </div>
     </div>
   );

@@ -10,11 +10,11 @@ const Index = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroImages = [
-    "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1433086966358-54859d0ed716?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1920&h=1080&fit=crop",
-    "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?w=1920&h=1080&fit=crop"
+    "/public/images/hero1.jpg",
+    "/public/images/hero2.jpg",
+    "/public/images/hero3.jpg",
+    "/public/images/hero4.jpg",
+    "/public/images/hero5.jpg"
   ];
 
   useEffect(() => {
@@ -171,10 +171,10 @@ const Index = () => {
         
         <div className="relative z-20 text-center text-white px-4 max-w-4xl">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Explore South India with <span className="gradient-text">ULA TRAVELS</span>
+            Explore South India with <span className="gradient-text">ULA TRAVEL</span>
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gold-200 animate-fade-in">
-            Discover the enchanting beauty of Kerala and Tamil Nadu with our curated premium packages
+            Discover the enchanting beauty of India with our curated premium packages
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in">
             <button 
