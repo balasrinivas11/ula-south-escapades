@@ -75,7 +75,7 @@ const RegistrationModal: React.FC<RegistrationModalProps> = ({ isOpen, onClose, 
 
       toast({
         title: "Registration Successful!",
-        description: `Thank you for choosing ULA TRAVELS. We'll contact you soon regarding your ${packageName} package.`,
+        description: `Thank you for choosing ULA TRAVEL. We'll contact you soon regarding your ${packageName} package.`,
       });
 
       // Reset form and close modal

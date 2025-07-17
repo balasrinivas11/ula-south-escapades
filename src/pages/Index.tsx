@@ -259,7 +259,7 @@ const Index = () => {
             Ready for Your South Indian Adventure?
           </h2>
           <p className="text-xl text-navy-800 mb-8 max-w-2xl mx-auto">
-            Join thousands of satisfied travelers who have explored the wonders of South India with ULA TRAVELS
+            Join thousands of satisfied travelers who have explored the wonders of South India with ULA TRAVEL
           </p>
           <button 
             onClick={() => handleRegister('Custom Package')}

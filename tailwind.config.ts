@@ -63,7 +63,7 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// ULA TRAVELS Premium Theme
+				// ULA TRAVEL Premium Theme
 				navy: {
 					50: '#f0f4ff',
 					100: '#e0e7ff',

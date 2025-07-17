@@ -30,7 +30,7 @@ const Contact = () => {
         from_name: formData.name,
         from_email: formData.email,
         message: formData.message,
-        subject: 'Contact Form Submission - ULA TRAVELS'
+        subject: 'Contact Form Submission - ULA TRAVEL'
       };
 
       await emailjs.send(
@@ -42,7 +42,7 @@ const Contact = () => {
 
       toast({
         title: "Message Sent Successfully!",
-        description: "Thank you for contacting ULA TRAVELS. We'll get back to you soon.",
+        description: "Thank you for contacting ULA TRAVEL. We'll get back to you soon.",
       });
 
       // Reset form
@@ -69,7 +69,7 @@ const Contact = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Contact <span className="gradient-text">ULA TRAVELS</span>
+            Contact <span className="gradient-text">ULA TRAVEL</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Ready to embark on your South Indian adventure? Get in touch with our travel experts

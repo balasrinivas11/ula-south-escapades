@@ -11,7 +11,7 @@ const About = () => {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            About <span className="gradient-text">ULA TRAVELS</span>
+            About <span className="gradient-text">ULA TRAVEL</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Your trusted partner in discovering the enchanting beauty and rich culture of South India
@@ -25,7 +25,7 @@ const About = () => {
             <div className="text-gray-300 space-y-4">
               <p>
                 Founded with a passion for showcasing the incredible diversity of South India, 
-                ULA TRAVELS has been creating unforgettable journeys for travelers from around the world. 
+                ULA TRAVEL has been creating unforgettable journeys for travelers from around the world. 
                 Our deep-rooted connection to the region and extensive local knowledge ensures authentic 
                 experiences that go beyond typical tourist destinations.
               </p>
@@ -114,7 +114,7 @@ const About = () => {
         {/* Why Choose Us Section */}
         <div>
           <h2 className="text-4xl font-bold text-center text-white mb-12">
-            Why Choose <span className="gradient-text">ULA TRAVELS</span>
+            Why Choose <span className="gradient-text">ULA TRAVEL</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
