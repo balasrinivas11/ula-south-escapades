@@ -154,8 +154,8 @@ const Contact = () => {
                   <div>
                     <h4 className="text-lg font-semibold text-white mb-1">Office Address</h4>
                     <p className="text-gray-300">
-                      123 Travel Street, MG Road<br />
-                      Kochi, Kerala 682001<br />
+                      No 36 , AN Colony<br />
+                      Mudichur,Chennai 600048<br />
                       India
                     </p>
                   </div>
