@@ -40,7 +40,7 @@ cd ula-travel-project
 
 2. Install Dependencies
 npm install
-# or
+or
 yarn install
 
 3. Configure EmailJS
@@ -61,7 +61,7 @@ emailjs.send(
 
 4. Run in Development Mode
 npm run dev
-# or
+or
 yarn dev
 
 5. Build for Production
